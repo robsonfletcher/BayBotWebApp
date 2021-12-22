@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{requested_name}}{% endblock %}
+{% block content %}
+<h2>Results for <b>{{requested_name}}</b>:</h2>
+<br>
+<h4>Total babies (from 1980 to 2020):</h4>
+<br>
+<h5>• Total boys named {{requested_name}}: <b>{{boycount}}</b></h5>
+<h5>• Total girls named {{requested_name}}: <b>{{girlcount}}</b></h5>
+<br>
+<h4>Number of babies named {{requested_name}}, by year:</h4>
+<img src="/static/images/result.png" alt="Name chart" style="max-width:640px;  width:100%;">
+<br>
+<h4>Popularity of {{requested_name}} over the past 40 years:</h4>
+<br>
+<p>• Among <u>boys</u>, {{requested_name}} was <b>most popular</b> as a name in <b>{{mostpop_boy_year}}</b>, when it <b>ranked #{{mostpop_boy_rank}}</b> out of all names that year.</p>
+<p>• {{requested_name}} was <b>least popular</b> among boys in <b>{{leastpop_boy_year}}</b>, when it <b>ranked #{{leastpop_boy_rank}}</b> out of all names that year.</p>
+<br>
+<p>• Among <u>girls</u>, {{requested_name}} was <b>most popular</b> as a name in <b>{{mostpop_girl_year}}</b>, when it <b>ranked #{{mostpop_girl_rank}}</b> out of all names that year.</p>
+<p>• {{requested_name}} was <b>least popular</b> among girls in <b>{{leastpop_girl_year}}</b>, when it ranked <b>#{{leastpop_girl_rank}}</b> out of all names that year.</p>
+<br>
+<h4>How {{requested_name}} ranked, by year:</h4>
+<img src="/static/images/ranks.png" alt="Rank chart" style="max-width:640px;  width:100%;">
+<br>
+{% endblock %}
